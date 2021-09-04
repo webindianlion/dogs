@@ -1,0 +1,31 @@
+<h1>THIS IS ROUTE-B</h1>
+
+<div  class="container d-flex flex-column p-0">
+  <div class="d-block">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="container-fluid">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <!-- <a routerLink="route-a" class="nav-link">Route B1</a> -->
+              <a routerLink="route-b1" routerLinkActive="btn btn-primary text-white" class="nav-link">Route B1</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="route-b2" routerLinkActive="btn btn-primary text-white" class="nav-link">Route B2</a>
+            </li>
+          </ul>            
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="d-block p-3 bg-warning">
+    <ul>
+      <li *ngFor="let department of departments" (click)="onSelect(department)">
+         <span class="btn">{{department.id}} </span>
+         <span class="btn">{{department.name}} </span>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>

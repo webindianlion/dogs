@@ -1,0 +1,32 @@
+<!-- <h2>LIST OF ALL DOG'S BREEDS </h2> -->
+<h2 *ngIf="!subBreadExists">These Images are of the <b class="text-primary text-uppercase">{{currentBreadName}}</b>  Bread of Dogs</h2>
+<h2 *ngIf="subBreadExists">Please Choose Sub-Bread of Dog. </h2>
+<!-- <select (change)="changeDogBread($event)">
+  <option [value]="i" *ngFor="let dogbread of dogsBread; index as i">{{dogbread}}</option>
+</select> -->
+<!--  -->
+
+<!-- <select #selectDogBread (change)="singleBreadDogsChoose($event)" class="form-select form-select-lg mb-3 text-capitalize">
+  <option value="{{dogbread}}" *ngFor="let dogbread of dogsBread; index as i">{{dogbread}}</option>
+</select> -->
+
+
+
+<select #selectDogBread (change)="changeDogBread($event)" class="form-select form-select-lg mb-3 text-capitalize">
+  <option  [label]="dogbread" [value]="i" *ngFor="let dogbread of dogsBread; index as i">{{dogbread}}</option>
+</select>
+
+<select *ngIf="dogsSubBreadTure" (change)="changeDogSubBread($event)" class="form-select form-select-lg mb-3 text-capitalize">
+  <option value="">Choose Sub-Bread</option>
+  <option value="{{dogSubBread}}" *ngFor="let dogSubBread of dogsSubBread1; index as j">{{dogSubBread}}</option>
+</select> 
+
+<!-- ----------------------------------------------- -->
+<hr style="height: 5px;" class="bg-primary opacity-100">
+
+
+<div class="d-flex flex-wrap">
+  
+  <img *ngFor="let singleBreadDogImages of singleBreadDogsImages" src="{{singleBreadDogImages}}" width="200px" height="200px" class=" p-1 m-1 bg-body rounded">
+</div>
+

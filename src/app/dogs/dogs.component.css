@@ -1,0 +1,4 @@
+/* .breadList{height: 200px;} */
+.breadList li{transition: all 0.2s linear 0s;border-radius: 3px; line-height: 10px; font-weight: 500; }
+.breadList li:hover{background-color: rgb(13, 110, 253); color: #fff!important; transition: all 0.2s linear 0s;}
+.breadList span{cursor: pointer;}

@@ -1,0 +1,61 @@
+
+<!-- ------------------------NEXT SECTION------------------------ -->
+<!-- <hr style="height: 5px;" class="bg-primary opacity-100">
+
+<h2>This is Rendom Dog Image</h2>
+<div class="d-block" style="height: 200px;">
+  <img [src]="dogImageUrl" alt="Loading New Image" width="200px" >
+</div>
+<button class="btn btn-primary m-3" (click)="changeDogImage()">Change Dog Image by Rendom Bread</button> -->
+
+<!-- ------------------------NEXT SECTION------------------------ -->
+<!-- <hr style="height: 5px;" class="bg-primary opacity-100">
+<h2>LIST OF ALL DOG'S BREEDS </h2>
+
+<select (change)="changeDogBread($event)">
+  <option [value]="i" *ngFor="let dogbread of dogsBread; index as i">{{dogbread}}</option>
+</select>
+
+<select *ngIf="dogsSubBreadTure">
+  <option value="" *ngFor="let dogSubBread of dogsSubBread1; index as i">{{dogSubBread}}</option>
+</select>  -->
+
+<!-- ------------------------NEXT SECTION------------------------ -->
+
+<!-- <ul>
+  <li *ngFor="let dogbread of dogsBread; index as i">
+    <span> {{i}} {{dogbread}} </span>
+    <ul>
+      <li *ngFor="let dogSubBread of dogsSubBread[i]; index as i">  {{dogSubBread}} </li>
+    </ul>
+  </li>
+</ul> -->
+
+
+
+<!-- <hr style="height: 5px;" class="bg-primary opacity-100"> -->
+
+
+<div class="container d-flex flex-row">
+
+  <!-- <div class="col">
+    <h4>These Images are of the <b class="text-primary text-uppercase">{{currentBreadName}}</b> Bread of Dogs</h4>
+
+    <div class="d-flex flex-wrap overflow-auto" style="height: 250px;">
+      <img *ngFor="let singleBreadDogImages of singleBreadDogsImages" src="{{singleBreadDogImages}}" width="200px" height="200px" class=" p-1 m-1 bg-body rounded">
+    </div>
+  </div> -->
+
+  <div class="col">
+    <h4>LIST OF ALL DOG'S BREEDS </h4>
+    <p>Click any bread to see photoes realated to that bread.</p>
+    <div class="d-block overflow-auto breadList">
+      <ul class="list-group list-group-horizontal flex-wrap justify-content-between">
+        <li *ngFor="let dogbread of dogsBread;"  class="list-group-item m-1 text-uppercase text-primary">
+          <span [id]="dogbread" class="" (click)="singleBreadDogs($event)"> {{dogbread}} </span>    
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</div>
